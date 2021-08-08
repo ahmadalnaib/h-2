@@ -11,4 +11,9 @@ class Tag extends Model
      'name',
     ];
     use HasFactory;
+
+    public function lessons()
+    {
+        return $this->belongsToMany(Lesson::class);
+    }
 }
